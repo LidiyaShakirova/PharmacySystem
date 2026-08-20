@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<VBox spacing="15" alignment="CENTER" style="-fx-background-color: #e0f2f1; -fx-padding: 40px;"
+      prefWidth="400" prefHeight="500"  xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacy.pharmacy_system.Controller.LoginController">
+
+   <Label text="Больничная аптека" textFill="#004d40">
+      <font>
+         <Font size="24" name="System Bold"/>
+      </font>
+   </Label>
+
+   <Label text="Вход в систему" textFill="#00695c">
+      <font>
+         <Font size="14"/>
+      </font>
+   </Label>
+
+   <Separator style="-fx-opacity: 0.3;" prefWidth="300"/>
+
+   <TextField fx:id="usernameField" promptText="Логин" prefWidth="300" style="-fx-background-color: #ffffff; -fx-background-radius: 25; -fx-padding: 12; -fx-border-radius: 25; -fx-border-color: #b2dfdb;"/>
+
+   <!-- Поле для ввода пароля (скрытое) -->
+   <PasswordField fx:id="passwordField" promptText="Пароль" prefWidth="300" style="-fx-background-color: #ffffff; -fx-background-radius: 25; -fx-padding: 12; -fx-border-radius: 25; -fx-border-color: #b2dfdb;"/>
+
+   <!-- Поле для отображения пароля (видимое) -->
+   <TextField fx:id="visiblePasswordField" promptText="Пароль" prefWidth="300" style="-fx-background-color: #ffffff; -fx-background-radius: 25; -fx-padding: 12; -fx-border-radius: 25; -fx-border-color: #b2dfdb;" visible="false" managed="false"/>
+
+   <HBox spacing="10" alignment="CENTER">
+      <CheckBox fx:id="showPasswordCheckBox" text="Показать пароль" textFill="#004d40"/>
+   </HBox>
+
+   <Button text="Войти" onAction="#handleLogin" prefWidth="300" style="-fx-background-color: #80cbc4; -fx-text-fill: #004d40; -fx-font-weight: bold; -fx-background-radius: 25; -fx-padding: 12; -fx-cursor: hand;"/>
+
+   <Label fx:id="errorLabel" textFill="#e57373" style="-fx-font-size: 12px;"/>
+
+</VBox>

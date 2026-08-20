@@ -1,0 +1,57 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacy.pharmacy_system.Controller.MovementDialogController">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <Label fx:id="typeLabel" text="Движение товара" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #004d40;"/>
+
+    <Separator style="-fx-background-color: #b2dfdb;"/>
+
+    <!-- Поиск и добавление -->
+    <Label text="🔍 Выберите препарат:" style="-fx-text-fill: #004d40;"/>
+    <TextField fx:id="drugSearchField" promptText="Начните вводить название..." prefWidth="450" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-padding: 8; -fx-border-radius: 20; -fx-border-color: #b2dfdb;"/>
+
+    <Label text=" Количество:" style="-fx-text-fill: #004d40;"/>
+    <HBox spacing="10">
+        <TextField fx:id="quantityField" promptText="Введите количество" prefWidth="350" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-padding: 8; -fx-border-radius: 20; -fx-border-color: #b2dfdb;"/>
+        <Button fx:id="addToListButton" text="➕ Добавить в список" onAction="#addToList" style="-fx-background-color: #80cbc4; -fx-text-fill: #004d40; -fx-background-radius: 20; -fx-cursor: hand; -fx-padding: 8 16;"/>
+    </HBox>
+
+    <Separator style="-fx-background-color: #b2dfdb;"/>
+
+    <!-- Список добавленных товаров -->
+    <Label text="Список товаров:" style="-fx-text-fill: #004d40; -fx-font-weight: bold;"/>
+    <TableView fx:id="itemsTable" VBox.vgrow="ALWAYS" prefHeight="200" style="-fx-background-color: #ffffff; -fx-border-color: #b2dfdb; -fx-border-radius: 8;">
+        <columns>
+            <TableColumn fx:id="drugColumn" text="Препарат" prefWidth="300"/>
+            <TableColumn fx:id="quantityColumn" text="Количество" prefWidth="100" style="-fx-alignment: CENTER;"/>
+            <TableColumn fx:id="remainingColumn" text="Доступно" prefWidth="100" style="-fx-alignment: CENTER;"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button fx:id="removeItemButton" text="🗑 Удалить выбранное" onAction="#removeFromList" style="-fx-background-color: #ef9a9a; -fx-text-fill: #004d40; -fx-background-radius: 20; -fx-cursor: hand; -fx-padding: 8 16;"/>
+    </HBox>
+
+    <Separator style="-fx-background-color: #b2dfdb;"/>
+
+    <!-- Итог -->
+    <HBox spacing="20">
+        <Label text="Всего позиций:" style="-fx-text-fill: #004d40;"/>
+        <Label fx:id="totalItemsLabel" text="0" style="-fx-text-fill: #00695c; -fx-font-weight: bold;"/>
+        <Label text="Общее количество:" style="-fx-text-fill: #004d40;"/>
+        <Label fx:id="totalQuantityLabel" text="0" style="-fx-text-fill: #00695c; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <Separator style="-fx-background-color: #b2dfdb;"/>
+
+    <HBox spacing="15" alignment="CENTER_RIGHT">
+        <Button fx:id="saveButton" text="💾 Сохранить всё" onAction="#saveMovement" style="-fx-background-color: #80cbc4; -fx-text-fill: #004d40; -fx-background-radius: 20; -fx-cursor: hand; -fx-padding: 8 16;"/>
+        <Button fx:id="closeButton" text="✖ Отмена" onAction="#closeDialog" style="-fx-background-color: #ef9a9a; -fx-text-fill: #004d40; -fx-background-radius: 20; -fx-cursor: hand; -fx-padding: 8 16;"/>
+    </HBox>
+</VBox>

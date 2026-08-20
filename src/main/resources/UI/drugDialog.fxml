@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" alignment="CENTER" style="-fx-background-color: #ffffff; -fx-border-color: #b2dfdb; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacy.pharmacy_system.Controller.DrugDialogController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text=" Редактирование препарата" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #004d40;"/>
+
+    <Separator style="-fx-background-color: #b2dfdb;"/>
+
+    <Label text="Название:" style="-fx-text-fill: #004d40;"/>
+    <TextField fx:id="nameField" prefWidth="350" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-padding: 8; -fx-border-radius: 20; -fx-border-color: #b2dfdb;"/>
+
+    <Label text="Категория:" style="-fx-text-fill: #004d40;"/>
+    <ComboBox fx:id="categoryComboBox" prefWidth="350" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #b2dfdb;"/>
+
+    <Label text="Недельный расход:" style="-fx-text-fill: #004d40;"/>
+    <TextField fx:id="weeklySalesField" promptText="Недельный расход" prefWidth="350" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-padding: 8; -fx-border-radius: 20; -fx-border-color: #b2dfdb;"/>
+
+    <Label text="Текущий остаток:" style="-fx-text-fill: #004d40;"/>
+    <TextField fx:id="currentStockField" promptText="Текущий остаток" prefWidth="350" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-padding: 8; -fx-border-radius: 20; -fx-border-color: #b2dfdb;"/>
+
+    <Separator style="-fx-background-color: #b2dfdb;"/>
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button fx:id="saveButton" text="💾 Сохранить" onAction="#saveDrug" prefWidth="120" style="-fx-background-color: #80cbc4; -fx-text-fill: #004d40; -fx-background-radius: 20; -fx-cursor: hand; -fx-padding: 8 16;"/>
+        <Button text="✖ Отмена" onAction="#close" prefWidth="120" style="-fx-background-color: #ef9a9a; -fx-text-fill: #004d40; -fx-background-radius: 20; -fx-cursor: hand; -fx-padding: 8 16;"/>
+    </HBox>
+</VBox>

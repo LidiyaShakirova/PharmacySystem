@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" style="-fx-background-color: #ffffff; -fx-border-color: #b2dfdb; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacy.pharmacy_system.Controller.OrderDetailsDialogController">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <!-- Заголовок -->
+    <Label text="📄 Детали заявки" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #004d40;"/>
+
+    <Separator style="-fx-background-color: #b2dfdb;"/>
+
+    <!-- Кнопки действий -->
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button fx:id="editButton" text="✏ Редактировать" onAction="#editOrder"  style="-fx-background-color: #ffcc80; -fx-text-fill: #004d40; -fx-background-radius: 20; -fx-cursor: hand; -fx-padding: 8 16;"/>
+        <Button fx:id="changeStatusButton" text=" Изменить статус" onAction="#changeStatus"  style="-fx-background-color: #ffab91; -fx-text-fill: #004d40; -fx-background-radius: 20; -fx-cursor: hand; -fx-padding: 8 16;"/>
+        <Button fx:id="exportButton" text="📎 Выгрузить в Excel" onAction="#exportToExcel" style="-fx-background-color: #80cbc4; -fx-text-fill: #004d40; -fx-background-radius: 20; -fx-cursor: hand; -fx-padding: 8 16;"/>
+        <Button fx:id="closeButton" text="✖ Закрыть" onAction="#close" style="-fx-background-color: #ef9a9a; -fx-text-fill: #004d40; -fx-background-radius: 20; -fx-cursor: hand; -fx-padding: 8 16;"/>
+    </HBox>
+
+    <Separator style="-fx-background-color: #b2dfdb;"/>
+
+    <!-- Информация о заявке -->
+    <GridPane hgap="15" vgap="8" style="-fx-background-color: #f8f9fa; -fx-border-color: #b2dfdb; -fx-border-radius: 8; -fx-padding: 10;">
+        <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+
+        <Label text="📋 Заявка:" style="-fx-font-weight: bold; -fx-text-fill: #004d40;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="idLabel" style="-fx-text-fill: #00695c;" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="👤 Создатель:" style="-fx-font-weight: bold; -fx-text-fill: #004d40;" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+        <Label fx:id="userLabel" style="-fx-text-fill: #00695c;" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+        <Label text="📌 Статус:" style="-fx-font-weight: bold; -fx-text-fill: #004d40;" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="statusLabel" style="-fx-text-fill: #00695c;" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="📅 Дата создания:" style="-fx-font-weight: bold; -fx-text-fill: #004d40;" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+        <Label fx:id="dateLabel" style="-fx-text-fill: #00695c;" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+    </GridPane>
+
+    <Separator style="-fx-background-color: #b2dfdb;"/>
+
+    <Label text="📋 Позиции заявки:" style="-fx-font-weight: bold; -fx-text-fill: #004d40; -fx-font-size: 14px;"/>
+
+    <!-- Таблица с позициями -->
+    <TableView fx:id="itemsTable" VBox.vgrow="ALWAYS" style="-fx-background-color: #ffffff; -fx-border-color: #b2dfdb; -fx-border-radius: 8;">
+        <columns>
+            <TableColumn fx:id="drugNameColumn" text="Препарат" prefWidth="350" style="-fx-font-weight: bold;"/>
+            <TableColumn fx:id="quantityColumn" text="Заказано" prefWidth="80" style="-fx-alignment: CENTER; -fx-font-weight: bold;"/>
+            <TableColumn fx:id="receivedColumn" text="Поступило" prefWidth="80" style="-fx-alignment: CENTER; -fx-font-weight: bold;"/>
+            <TableColumn fx:id="remainingColumn" text="Осталось" prefWidth="80" style="-fx-alignment: CENTER; -fx-font-weight: bold;"/>
+        </columns>
+    </TableView>
+</VBox>

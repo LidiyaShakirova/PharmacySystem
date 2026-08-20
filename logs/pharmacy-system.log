@@ -1,0 +1,127 @@
+2026-07-07T21:40:25.689+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] c.p.p.PharmacySystemApplication          : Starting PharmacySystemApplication using Java 21.0.2 with PID 20676 (C:\Users\Лидия\Downloads\pharmacy-system\pharmacy-system\target\classes started by Лидия in C:\Users\Лидия\Downloads\pharmacy-system\pharmacy-system)
+2026-07-07T21:40:25.733+03:00 DEBUG 20676 --- [pharmacy-system] [restartedMain] c.p.p.PharmacySystemApplication          : Running with Spring Boot v4.0.0-M3, Spring v7.0.0-M9
+2026-07-07T21:40:25.739+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] c.p.p.PharmacySystemApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-07-07T21:40:25.876+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-07T21:40:27.115+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-07T21:40:27.323+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 185 ms. Found 7 JPA repository interfaces.
+2026-07-07T21:40:28.489+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-07T21:40:28.668+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.1.Final
+2026-07-07T21:40:29.909+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-07T21:40:30.021+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-07T21:40:30.804+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@616b840d
+2026-07-07T21:40:30.810+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-07T21:40:31.054+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/Diplom]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.2
+	Default catalog/schema: Diplom/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-07T21:40:33.577+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-07T21:40:33.581+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] org.hibernate.orm.jdbc.batch             : HHH100501: Automatic JDBC statement batching enabled (maximum batch size 20)
+2026-07-07T21:40:34.249+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-07T21:40:34.462+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-07T21:40:38.242+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-07T21:40:38.380+03:00  INFO 20676 --- [pharmacy-system] [restartedMain] c.p.p.PharmacySystemApplication          : Started PharmacySystemApplication in 13.955 seconds (process running for 16.016)
+2026-07-07T21:40:38.799+03:00  WARN 20676 --- [pharmacy-system] [JavaFX-Launcher] javafx                                   : Unsupported JavaFX configuration: classes were loaded from 'unnamed module @58795591'
+2026-07-07T21:41:16.209+03:00  INFO 20676 --- [pharmacy-system] [JavaFX Application Thread] c.p.pharmacy_system.Service.UserService  : Попытка входа: user1
+2026-07-07T21:41:16.413+03:00  INFO 20676 --- [pharmacy-system] [JavaFX Application Thread] c.p.pharmacy_system.Service.UserService  : Успешный вход: user1 (PHARMACIST)
+2026-07-07T21:41:16.609+03:00  INFO 20676 --- [pharmacy-system] [JavaFX Application Thread] c.p.p.Controller.MonitorController       : MonitorController.initialize() начат
+2026-07-07T21:41:17.142+03:00  INFO 20676 --- [pharmacy-system] [JavaFX Application Thread] c.p.p.Controller.MonitorController       : Загружено препаратов: 389
+2026-07-07T21:41:17.270+03:00  INFO 20676 --- [pharmacy-system] [JavaFX Application Thread] c.p.p.Controller.MonitorController       : MonitorController.initialize() завершён
+2026-07-07T21:41:17.406+03:00  INFO 20676 --- [pharmacy-system] [JavaFX Application Thread] c.p.p.Controller.OrderController         : OrderController initialize
+2026-07-07T21:41:17.544+03:00  INFO 20676 --- [pharmacy-system] [JavaFX Application Thread] c.p.p.Controller.MovementController      : MovementController.initialize() начат
+2026-07-07T21:41:18.579+03:00  INFO 20676 --- [pharmacy-system] [JavaFX Application Thread] c.p.p.Controller.MovementController      : MovementController.initialize() завершён
+2026-07-07T21:41:22.046+03:00  INFO 20676 --- [pharmacy-system] [JavaFX Application Thread] c.p.p.Controller.OrderController         : Загружено 21 заявок
+2026-07-07T21:41:26.481+03:00  INFO 20676 --- [pharmacy-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-07T21:41:26.496+03:00  INFO 20676 --- [pharmacy-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-07T21:41:26.512+03:00  INFO 20676 --- [pharmacy-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-07T21:50:11.872+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] c.p.p.PharmacySystemApplication          : Starting PharmacySystemApplication using Java 21.0.2 with PID 29068 (C:\Users\Лидия\Downloads\pharmacy-system\pharmacy-system\target\classes started by Лидия in C:\Users\Лидия\Downloads\pharmacy-system\pharmacy-system)
+2026-07-07T21:50:11.882+03:00 DEBUG 29068 --- [pharmacy-system] [restartedMain] c.p.p.PharmacySystemApplication          : Running with Spring Boot v4.0.0-M3, Spring v7.0.0-M9
+2026-07-07T21:50:11.886+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] c.p.p.PharmacySystemApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-07-07T21:50:12.078+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-07T21:50:14.108+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-07T21:50:14.424+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 280 ms. Found 7 JPA repository interfaces.
+2026-07-07T21:50:15.827+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-07T21:50:16.045+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.1.Final
+2026-07-07T21:50:17.700+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-07T21:50:17.813+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-07T21:50:18.399+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@55c7a5a7
+2026-07-07T21:50:18.404+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-07T21:50:18.646+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/Diplom]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.2
+	Default catalog/schema: Diplom/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-07T21:50:21.312+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-07T21:50:21.319+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] org.hibernate.orm.jdbc.batch             : HHH100501: Automatic JDBC statement batching enabled (maximum batch size 20)
+2026-07-07T21:50:22.021+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-07T21:50:22.285+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-07T21:50:25.891+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-07T21:50:26.007+03:00  INFO 29068 --- [pharmacy-system] [restartedMain] c.p.p.PharmacySystemApplication          : Started PharmacySystemApplication in 16.048 seconds (process running for 18.074)
+2026-07-07T21:50:26.358+03:00  WARN 29068 --- [pharmacy-system] [JavaFX-Launcher] javafx                                   : Unsupported JavaFX configuration: classes were loaded from 'unnamed module @58795591'
+2026-07-07T21:50:54.701+03:00  INFO 29068 --- [pharmacy-system] [JavaFX Application Thread] c.p.pharmacy_system.Service.UserService  : Попытка входа: user1
+2026-07-07T21:50:54.905+03:00  INFO 29068 --- [pharmacy-system] [JavaFX Application Thread] c.p.pharmacy_system.Service.UserService  : Успешный вход: user1 (PHARMACIST)
+2026-07-07T21:50:55.096+03:00  INFO 29068 --- [pharmacy-system] [JavaFX Application Thread] c.p.p.Controller.MonitorController       : MonitorController.initialize() начат
+2026-07-07T21:50:55.602+03:00  INFO 29068 --- [pharmacy-system] [JavaFX Application Thread] c.p.p.Controller.MonitorController       : Загружено препаратов: 389
+2026-07-07T21:50:55.779+03:00  INFO 29068 --- [pharmacy-system] [JavaFX Application Thread] c.p.p.Controller.MonitorController       : MonitorController.initialize() завершён
+2026-07-07T21:50:55.903+03:00  INFO 29068 --- [pharmacy-system] [JavaFX Application Thread] c.p.p.Controller.OrderController         : OrderController initialize
+2026-07-07T21:50:56.061+03:00  INFO 29068 --- [pharmacy-system] [JavaFX Application Thread] c.p.p.Controller.MovementController      : MovementController.initialize() начат
+2026-07-07T21:50:56.940+03:00  INFO 29068 --- [pharmacy-system] [JavaFX Application Thread] c.p.p.Controller.MovementController      : MovementController.initialize() завершён
+2026-07-07T21:50:59.241+03:00  INFO 29068 --- [pharmacy-system] [JavaFX Application Thread] c.p.p.Controller.OrderController         : Загружено 21 заявок
+2026-07-07T21:51:00.930+03:00  INFO 29068 --- [pharmacy-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-07T21:51:00.937+03:00  INFO 29068 --- [pharmacy-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-07T21:51:00.971+03:00  INFO 29068 --- [pharmacy-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-07T21:51:13.251+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] c.p.p.PharmacySystemApplication          : Starting PharmacySystemApplication using Java 21.0.2 with PID 29968 (C:\Users\Лидия\Downloads\pharmacy-system\pharmacy-system\target\classes started by Лидия in C:\Users\Лидия\Downloads\pharmacy-system\pharmacy-system)
+2026-07-07T21:51:13.261+03:00 DEBUG 29968 --- [pharmacy-system] [restartedMain] c.p.p.PharmacySystemApplication          : Running with Spring Boot v4.0.0-M3, Spring v7.0.0-M9
+2026-07-07T21:51:13.264+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] c.p.p.PharmacySystemApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-07-07T21:51:13.436+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-07T21:51:15.028+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-07T21:51:15.320+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 267 ms. Found 7 JPA repository interfaces.
+2026-07-07T21:51:16.838+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-07T21:51:17.047+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.1.Final
+2026-07-07T21:51:19.028+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-07T21:51:19.185+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-07T21:51:19.868+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:23b7bf5d-48e2-4e87-b06f-ac5b0e7649b7 user=SA
+2026-07-07T21:51:19.872+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-07T21:51:20.087+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:23b7bf5d-48e2-4e87-b06f-ac5b0e7649b7]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.3.232
+	Default catalog/schema: 23B7BF5D-48E2-4E87-B06F-AC5B0E7649B7/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-07T21:51:22.713+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-07T21:51:22.718+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] org.hibernate.orm.jdbc.batch             : HHH100501: Automatic JDBC statement batching enabled (maximum batch size 20)
+2026-07-07T21:51:22.898+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-07T21:51:23.190+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-07T21:51:26.683+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-07T21:51:26.822+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] c.p.p.PharmacySystemApplication          : Started PharmacySystemApplication in 15.201 seconds (process running for 16.948)
+2026-07-07T21:51:27.313+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] c.p.pharmacy_system.Service.UserService  : Создан новый пользователь: admin
+2026-07-07T21:51:27.314+03:00  INFO 29968 --- [pharmacy-system] [restartedMain] c.p.pharmacy_system.Service.UserService  : Создан администратор по умолчанию: admin/123
+2026-07-07T21:51:27.394+03:00  WARN 29968 --- [pharmacy-system] [JavaFX-Launcher] javafx                                   : Unsupported JavaFX configuration: classes were loaded from 'unnamed module @6d915b1e'
+2026-07-07T21:56:23.341+03:00  WARN 29968 --- [pharmacy-system] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m3s350ms233µs200ns).
+2026-07-07T22:01:32.887+03:00  WARN 29968 --- [pharmacy-system] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m39s480ms183µs400ns).
+2026-07-07T22:05:37.697+03:00  WARN 29968 --- [pharmacy-system] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m4s810ms57µs100ns).
+2026-07-07T22:11:01.382+03:00  INFO 29968 --- [pharmacy-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-07T22:11:01.415+03:00  WARN 29968 --- [pharmacy-system] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-07T22:11:01.417+03:00  INFO 29968 --- [pharmacy-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-07T22:11:01.429+03:00  INFO 29968 --- [pharmacy-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

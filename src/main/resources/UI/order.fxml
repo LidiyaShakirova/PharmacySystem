@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox spacing="8" style="-fx-background-color: #e0f2f1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacy.pharmacy_system.Controller.OrderController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <Label text="📋 Управление заявками" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #004d40;"/>
+
+    <Separator style="-fx-background-color: #b2dfdb;"/>
+
+    <!-- Панель фильтров -->
+    <HBox spacing="8" alignment="CENTER_LEFT">
+        <Label text="Статус:" style="-fx-text-fill: #004d40; -fx-font-size: 12px;"/>
+        <ComboBox fx:id="statusFilter" prefWidth="120" style="-fx-background-color: #ffffff; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #b2dfdb;"/>
+        <Label text="Дата с:" style="-fx-text-fill: #004d40; -fx-font-size: 12px;"/>
+        <DatePicker fx:id="startDatePicker" prefWidth="110" style="-fx-background-color: #ffffff; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #b2dfdb;"/>
+        <Label text="по:" style="-fx-text-fill: #004d40; -fx-font-size: 12px;"/>
+        <DatePicker fx:id="endDatePicker" prefWidth="110" style="-fx-background-color: #ffffff; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #b2dfdb;"/>
+        <Button fx:id="filterButton" text="🔍 Применить" onAction="#applyFilters" style="-fx-background-color: #90caf9; -fx-text-fill: #004d40; -fx-background-radius: 15; -fx-cursor: hand; -fx-padding: 5 12; -fx-font-size: 11px;"/>
+        <Button fx:id="resetFilterButton" text="🗑 Сбросить" onAction="#resetFilters" style="-fx-background-color: #ef9a9a; -fx-text-fill: #004d40; -fx-background-radius: 15; -fx-cursor: hand; -fx-padding: 5 12; -fx-font-size: 11px;"/>
+    </HBox>
+
+    <!-- Таблица заявок -->
+    <TableView fx:id="ordersTable" VBox.vgrow="ALWAYS" style="-fx-background-color: #ffffff; -fx-border-color: #b2dfdb; -fx-border-radius: 8;">
+        <columns>
+            <TableColumn fx:id="idColumn" text="№" prefWidth="60"/>
+            <TableColumn fx:id="userColumn" text="Фармацевт" prefWidth="150"/>
+            <TableColumn fx:id="statusColumn" text="Статус" prefWidth="100"/>
+            <TableColumn fx:id="dateColumn" text="Дата" prefWidth="150"/>
+            <TableColumn fx:id="itemsCountColumn" text="Позиций" prefWidth="80"/>
+        </columns>
+    </TableView>
+
+    <!-- Панель кнопок -->
+    <HBox spacing="8">
+        <Button fx:id="createOrderButton" text="➕ Создать" onAction="#createOrder" style="-fx-background-color: #80cbc4; -fx-text-fill: #004d40; -fx-background-radius: 15; -fx-cursor: hand; -fx-padding: 5 12; -fx-font-size: 11px;"/>
+        <Button fx:id="autoOrderButton" text="⚡ Автозаявка" onAction="#autoOrder" style="-fx-background-color: #ce93d8; -fx-text-fill: #004d40; -fx-background-radius: 15; -fx-cursor: hand; -fx-padding: 5 12; -fx-font-size: 11px;"/>
+        <Button fx:id="deleteOrderButton" text="🗑 Удалить" onAction="#deleteOrder" style="-fx-background-color: #ef9a9a; -fx-text-fill: #004d40; -fx-background-radius: 15; -fx-cursor: hand; -fx-padding: 5 12; -fx-font-size: 11px;"/>
+        <Button fx:id="viewDetailsButton" text="📄 Детали" onAction="#viewDetails" style="-fx-background-color: #90caf9; -fx-text-fill: #004d40; -fx-background-radius: 15; -fx-cursor: hand; -fx-padding: 5 12; -fx-font-size: 11px;"/>
+        <Button fx:id="refreshButton" text="🔄 Обновить" onAction="#refreshTable" style="-fx-background-color: #ce93d8; -fx-text-fill: #004d40; -fx-background-radius: 15; -fx-cursor: hand; -fx-padding: 5 12; -fx-font-size: 11px;"/>
+    </HBox>
+
+    <Separator style="-fx-background-color: #b2dfdb;"/>
+
+    <!-- Настройки автозаказа (свёрнутые) -->
+    <TitledPane text="⚙️ Настройки автозаказа" expanded="false" style="-fx-background-color: #ffffff; -fx-border-color: #b2dfdb; -fx-border-radius: 8;">
+        <GridPane hgap="10" vgap="8">
+            <padding><Insets top="8" right="8" bottom="8" left="8"/></padding>
+            <Label text="Целевой период (недель):" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-size: 12px; -fx-text-fill: #004d40;"/>
+            <TextField fx:id="targetWeeksField" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="70" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #b2dfdb; -fx-font-size: 12px;"/>
+            <Label fx:id="targetWeeksLabel" text="Текущий: 2" GridPane.rowIndex="0" GridPane.columnIndex="2" style="-fx-font-size: 11px; -fx-text-fill: #00695c;"/>
+
+            <Label text="Лимит позиций:" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-size: 12px; -fx-text-fill: #004d40;"/>
+            <TextField fx:id="orderLimitField" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="70" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #b2dfdb; -fx-font-size: 12px;"/>
+            <Label fx:id="orderLimitLabel" text="Текущий: 50" GridPane.rowIndex="1" GridPane.columnIndex="2" style="-fx-font-size: 11px; -fx-text-fill: #00695c;"/>
+
+            <Button fx:id="saveSettingsButton" text="💾 Сохранить" onAction="#saveSettings" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="3" style="-fx-background-color: #80cbc4; -fx-text-fill: #004d40; -fx-background-radius: 15; -fx-cursor: hand; -fx-padding: 5 12; -fx-font-size: 11px;"/>
+        </GridPane>
+    </TitledPane>
+</VBox>
